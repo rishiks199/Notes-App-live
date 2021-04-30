@@ -1,0 +1,80 @@
+
+.container{
+    
+    margin-top: 5px;
+    padding: 5px;;
+}
+.body{
+    background-image: linear-gradient(to right,rgb(82, 243, 61) ,rgb(193, 243, 11));
+}
+.card-body{
+    background-color: rgb(176, 141, 233);
+    border:2px solid rgb(68, 241, 0);
+}
+
+.title{
+        text-align: center;
+        color: rgb(0, 68, 36);
+        background-color: cyan;
+        opacity: 1;
+        display: block;
+        border-radius: 20px;
+        font-family: 'Gabriela', serif;   
+}
+
+.card-text,.card-title,.nothing{
+    color: rgb(255, 17, 0);
+}
+
+textarea.form-control{
+    font-size: 20px;
+}
+
+textarea.form-control1{
+    font-size: 20px;
+    border: 1px solid rebeccapurple;
+}
+
+.first_footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 255, 213);
+    color: white;
+    text-align: center
+}
+
+.title1{
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border: 1px solid red;
+    
+    padding: 2px;
+}
+
+/* starts Favorites heart work */
+.flexbox1 {
+    padding: 0;
+     position: relative;
+    
+}
+
+.flexbox2{
+    position: absolute;
+	bottom: 107px;
+    right: -11px;
+
+    
+}
+
+
+.flexbox1 :hover{
+    cursor: pointer;
+    color: red;
+}
+.fav-btn {
+	display:flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        body{
+            background-image:linear-gradient(to left ,rgb(0, 209, 224),rgb(4, 134, 43));
+        }
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 15px;
+        margin-left: 20px;
+        color: rgb(0, 194, 152);
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+
+        const list = document.querySelector('ul');
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+
+       button.addEventListener('click',function(){
+           let input_value = input.value;
+        
+        //    console.log(input_value);
+         
+        input.value="";
+        if(input_value.length==0){
+            window.alert('Please Input some text!!!');
+            
+        }
+        if(input_value.length>0){
+        
+
+        const list_item = document.createElement('li');
+        const list_text = document.createElement('span');
+        const list_button = document.createElement('button');
+        
+        list_item.appendChild(list_text);
+        list_text.textContent=input_value;
+        list_item.appendChild(list_button);
+        list_button.textContent='Delete';
+        list.appendChild(list_item);
+
+        list_button.addEventListener('click',function(){
+            list.removeChild(list_item);    
+        })
+
+        input.focus();
+    }
+
+
+
+       }) 
+
+
+
+
+    </script>
+  </body>
+</html>
