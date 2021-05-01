@@ -8,7 +8,7 @@ addBtn.addEventListener("click", function (e) {
 
     let addText = document.getElementById('addtxt');
     // let title= document.getElementsById('title1');
-    if(addText.length===0){
+    if(addText.value.length===0){
         window.alert('Please Add Some Notes!!!!');
         return;
     }
