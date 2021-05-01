@@ -43,9 +43,9 @@ function showNotes() {
     let html = '';
 
     notes_array.forEach(function (element, index) {
-        if(element.length===''){
-            continue;
-        }
+        if(element.length!==''){
+            
+        
         html += `
         <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
                 <div class="card-body">
@@ -61,6 +61,7 @@ function showNotes() {
                
             </div>
                 `
+        }
     });
 
     let display_notes = document.getElementById('notes');
