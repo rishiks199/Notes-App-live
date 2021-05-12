@@ -8,7 +8,7 @@ addBtn.addEventListener("click", function (e) {
 
     let addText = document.getElementById('addtxt');
     // let title= document.getElementsById('title1');
-    console.log(addText.value.length);
+    // console.log(addText.value.length);
     if(addText.value.length===0){
         window.alert('Please Add Some Notes!!!!');
         return;
@@ -25,7 +25,7 @@ addBtn.addEventListener("click", function (e) {
 
     localStorage.setItem("notes", JSON.stringify(notes_array));
     addText.value = "";
-     console.log(notes_array);
+     //console.log(notes_array);
 
     showNotes();
 
@@ -45,24 +45,19 @@ function showNotes() {
 
     notes_array.forEach(function (element, index) {
         if(element.length!==''){
-            
-        
+           
+           
         html += `
-        <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+        <div class="noteCard my-2 mx-2 card" style="width: 18rem;" >
                 <div class="card-body">
                     <h5 class="card-title">Notes - ${index + 1}</h5>
                     <p class="card-text">${element}</p>
                     <button id="${index}" onclick ="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
-                    <div class = "flexbox1" onclick="deleteNote(this.id)">
-                    <div class="flexbox2">
-                <i class="fa fa-heart fa"></i>
-                            </div>
-                    </div>
                 </div>
                
             </div>
                 `
-        }
+            }
     });
 
     let display_notes = document.getElementById('notes');
@@ -75,9 +70,11 @@ function showNotes() {
         display_notes.innerHTML = nothing;
     }
 
+  
 
 }
 
+//detete a note function
 function deleteNote(index) {
 
     let notes = localStorage.getItem("notes");
@@ -95,6 +92,7 @@ function deleteNote(index) {
 
 }
 
+//Searching part
 let search = document.getElementById('Search');
 search.addEventListener("input", function () {
 
@@ -118,5 +116,6 @@ search.addEventListener("input", function () {
 
 
 })
+
 
 
